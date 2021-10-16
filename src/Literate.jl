@@ -373,7 +373,7 @@ Available options:
 """
 const DEFAULT_CONFIGURATION=nothing # Dummy const for documentation
 
-function preprocessor(inputfile, outputdir; user_config, user_kwargs, type, flavor)
+function preprocessor(inputfile, outputdir; user_config, user_kwargs, type, flavor=:jupyter)
     # Create configuration by merging default and userdefined
     config = create_configuration(inputfile; user_config=user_config,
         user_kwargs=user_kwargs, type=type)
